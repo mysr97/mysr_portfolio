@@ -1,1 +1,45 @@
 @charset "utf-8";
+
+
+#wrap {
+  width: 100vw;
+  height: 100vh;
+}
+
+.full {
+  width: 100%;
+  height: 100%;
+}
+
+/*--- page1 시작 ---*/
+.page1 {
+  background-color: rgba(0, 255, 255, 0.1);
+}
+
+
+
+/*--- page2 시작 ---*/
+.page2 {
+  background-color: rgba(0, 255, 255, 0.3);
+}
+
+
+
+/*--- page3 시작 ---*/
+.page3 {
+  background-color: rgba(0, 255, 255, 0.6);
+}
+
+
+
+/*--- page4 시작 ---*/
+.page4 {
+  background-color: rgba(0, 255, 255, 0.9);
+}
+
+
+
+/*--- page5 시작 ---*/
+.page5 {
+  background-color: rgba(0, 255, 255, 0.1);
+}
