@@ -36,6 +36,10 @@
   font-size: 6em;
 }
 
+.page1 .p1_wr ul li {
+  line-height: 100px;
+}
+
 .page1 .p1_wr ul:nth-child(1) {
   color: transparent;
   -webkit-text-stroke: 1px #333; circle(77.0% at 0 0);
