@@ -11,10 +11,56 @@
   height: 100%;
 }
 
+
 /*--- page1 시작 ---*/
 .page1 {
-  background-color: rgba(0, 255, 255, 0.1);
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
+
+.page1 .p1_wr {
+  width: 100%;
+  top: 0;
+  left: 50%;
+  position: relative;
+}
+
+.page1 .p1_wr ul{
+  position: absolute; /*ul 2개를 같은 곳에 위치하도록*/
+  color: transparent;
+  transform: translate(-50%, -50%);
+  font-weight: 900;
+  font-size: 6em;
+}
+
+.page1 .p1_wr ul:nth-child(1) {
+  color: transparent;
+  -webkit-text-stroke: 1px #333; circle(77.0% at 0 0);
+}
+
+.page1 .p1_wr ul:nth-child(2) {
+  color: #333;
+  animation: sori1 4s ease-in-out;
+}
+
+@keyframes sori1 {
+
+  0%,70% {
+    clip-path: circle(77.0% at 0 0);
+  }
+
+  50% {
+    clip-path: circle(77.0% at 100% 91%);
+  }
+
+  100% {
+    clip-path: circle(77.0% at 48% 51%);
+  }
+}
+
 
 
 
