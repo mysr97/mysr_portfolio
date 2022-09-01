@@ -27,6 +27,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .page1 .p1_wr {
@@ -88,9 +89,34 @@
 
 /*--- page2 시작 ---*/
 .page2 {
-  background-color: rgba(0, 255, 255, 0.3);
+  position: relative;
 }
 
+
+.page2 .p2_wr {
+  width: 100%;
+  top: 0;
+  position: relative;
+  cursor: pointer;
+}
+
+.page2 .p2_wr ul{
+  position: absolute; /*ul 2개를 같은 곳에 위치하도록*/
+  color: transparent;
+  transform: translate(-10%, 10%);
+  white-space: nowrap;
+  top: 50%;
+  right: 0;
+  font-weight: 900;
+  font-size: 7em;
+  line-height: 110px;
+  text-align: right;
+  font-style: italic;
+}
+
+.page2 .p2_wr ul:nth-child(1) {
+  -webkit-text-stroke: 1px #333;
+}
 
 
 /*--- page3 시작 ---*/
