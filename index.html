@@ -13,19 +13,18 @@
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
-
+  <script src="js/sori_one.js"></script>
 </head>
 
 <body>
 
     <div id="wrap">
+      <div class="cursor"></div>
 
         <div class="full page1">
-          <div class="circle"></div>
 
           <script>
-
-            const circle = document.querySelector(".circle");
+            const circle = document.querySelector(".cursor");
 
             document.addEventListener("mousemove", (e) => {
 
@@ -35,7 +34,6 @@
               circle.style.left = mouseX + 'px';
               circle.style.top = mouseY + 'px';
             });
-
           </script> 
 
           <div class="p1_wr">
@@ -55,6 +53,10 @@
             </div>
             
           </div>
+
+          <div class="p1_scroll">
+            <img src="img/scroll_icon.svg" alt="scroll">
+          </div>
         </div>
 
         <script>
@@ -69,8 +71,7 @@
             gsap.to(".p1_txt_mask_in", {
               y: -y
             });
-          });
-
+          })
         </script>
 
         <div class="full page2">

@@ -11,6 +11,15 @@
   height: 100%;
 }
 
+.cursor {
+  position: absolute;
+  width: 200px;
+  height: 10px;
+  background-color: rgba(127, 255, 212, 0.7);
+  z-index: 99;
+  cursor: none;
+  opacity: 1;
+} 
 
 /*--- page1 시작 ---*/
 .page1 {
@@ -31,7 +40,7 @@
   color: transparent;
   transform: translate(-50%, -50%);
   white-space: nowrap;
-  top: 15%;
+  top: -10%;
   left: 43%;
   font-weight: 900;
   font-size: 12em;
@@ -53,17 +62,26 @@
   background-color: #eee;
 }
 
-.circle {
+.p1_scroll {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 200px;
-  height: 10px;
-  background-color: rgba(127, 255, 212, 0.7);
-  transform: translate(-50%, -50%);
-  z-index: 99;
-  cursor: none;
-} 
+  bottom: 0;
+  animation: p1scroll 2s ease-in-out infinite;
+  cursor: pointer;
+}
+
+.p1_scroll img {
+  width: 80%;
+}
+@keyframes p1scroll {
+
+  0% ,100% {
+    bottom: 30px;
+  }
+
+  50% {
+    bottom: 0px;
+  }
+}
 
 
 
