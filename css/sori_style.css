@@ -32,24 +32,25 @@
   transform: translate(-50%, -50%);
   white-space: nowrap;
   top: 15%;
-  left: 35%;
+  left: 40%;
   font-weight: 900;
   font-size: 12em;
   line-height: 160px;
 }
 
 .page1 .p1_wr ul:nth-child(1) {
-  -webkit-text-stroke: 1px #333;
+  -webkit-text-stroke: 0.8px #333;
 }
 
 .page1 .p1_wr .p1_txt_mask{
+  position: relative;
   height: 160px;
   overflow: hidden;
 }
 
 .page1 .p1_wr .p1_txt_mask_in{
-  color: #333;
-  background-color: #EEE;
+  color: rgb(255, 224, 122);
+  background-color: #eee;
 }
 
 /* .circle {
