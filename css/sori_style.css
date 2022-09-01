@@ -32,7 +32,7 @@
   transform: translate(-50%, -50%);
   white-space: nowrap;
   top: 15%;
-  left: 40%;
+  left: 43%;
   font-weight: 900;
   font-size: 12em;
   line-height: 160px;
@@ -49,20 +49,21 @@
 }
 
 .page1 .p1_wr .p1_txt_mask_in{
-  color: rgb(255, 224, 122);
+  color: rgb(255, 251, 0);
   background-color: #eee;
 }
 
-/* .circle {
+.circle {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  background-color: palevioletred;
+  width: 200px;
+  height: 10px;
+  background-color: rgba(127, 255, 212, 0.7);
   transform: translate(-50%, -50%);
-} */
+  z-index: 99;
+  cursor: none;
+} 
 
 
 
