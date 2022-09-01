@@ -12,6 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
 
 </head>
 
@@ -20,6 +21,23 @@
     <div id="wrap">
 
         <div class="full page1">
+          <div class="circle"></div>
+
+          <!-- <script>
+
+            const circle = document.querySelector(".circle");
+
+            document.addEventListener("mousemove", (e) => {
+
+              const mouseX = e.clientX;
+              const mouseY = e.clientY;
+
+              circle.style.left = mouseX + 'px';
+              circle.style.top = mouseY + 'px';
+            });
+
+          </script> -->
+
           <div class="p1_wr">
             <ul>
               <li>LISTEN TO</li>
@@ -27,14 +45,33 @@
               <li>HELLO</li>
               <li>I'M SORI KIM</li>
             </ul>
-            <ul>
-              <li>LISTEN TO</li>
-              <li>MY SOUND</li>
-              <li>HELLO</li>
-              <li>I'M SORI KIM</li>
-            </ul>
+            <div class="p1_txt_mask">
+              <ul class="p1_txt_mask_in">
+                <li>LISTEN TO</li>
+                <li>MY SOUND</li>
+                <li>HELLO</li>
+                <li>I'M SORI KIM</li>
+              </ul>
+            </div>
+            
           </div>
         </div>
+
+        <script>
+          const container = document.querySelector(".p1_txt_mask");
+
+          document.body.addEventListener("mousemove", e => {
+            const x = e.clientX;
+            const y = e.clientY - 450;
+            gsap.to(container, {
+              y: y
+            });
+            gsap.to(".p1_txt_mask_in", {
+              y: -y
+            });
+          });
+
+        </script>
 
         <div class="full page2">
           page2
