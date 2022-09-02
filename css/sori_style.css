@@ -4,11 +4,14 @@
 #wrap {
   width: 100vw;
   height: 100vh;
+  margin: 0 auto;
+
 }
 
 .full {
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 
 .cursor {
@@ -23,6 +26,9 @@
 
 /*--- page1 시작 ---*/
 .page1 {
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
   background-color: rgb(255, 255, 255);
   display: flex;
   justify-content: center;
@@ -59,7 +65,7 @@
 }
 
 .page1 .p1_wr .p1_txt_mask_in{
-  color: rgb(255, 251, 0);
+  color: rgb(49, 49, 49);
   background-color: #eee;
 }
 
@@ -89,6 +95,9 @@
 
 /*--- page2 시작 ---*/
 .page2 {
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
   position: relative;
 }
 
@@ -112,15 +121,23 @@
   line-height: 110px;
   text-align: right;
   font-style: italic;
-}
-
-.page2 .p2_wr ul:nth-child(1) {
   -webkit-text-stroke: 1px #333;
 }
 
+.page2 .p2_wr ul li {
+}
+
+.page2 .p2_wr ul li span {
+  display: none;
+  font-size: 0.7em;
+  line-height: 80px;
+}
 
 /*--- page3 시작 ---*/
 .page3 {
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
   background-color: rgba(0, 255, 255, 0.6);
 }
 
@@ -128,6 +145,9 @@
 
 /*--- page4 시작 ---*/
 .page4 {
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
   background-color: rgba(0, 255, 255, 0.9);
 }
 
@@ -135,5 +155,8 @@
 
 /*--- page5 시작 ---*/
 .page5 {
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
   background-color: rgba(0, 255, 255, 0.1);
 }
