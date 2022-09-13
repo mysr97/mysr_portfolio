@@ -52,9 +52,9 @@ body {
 }
 .cursor {
   position: absolute;
-  width: 200px;
+  width: 150px;
   height: 10px;
-  background-color: rgba(127, 255, 212, 0.7);
+  background-color: #333;
   z-index: 99;
   cursor: none;
   opacity: 1;
@@ -62,23 +62,23 @@ body {
 
 .quick {
   position: fixed;
-  right: 20px;
+  right: 30px;
   top: 50%;
   transform: translateY(-50%);
   z-index: 100000;
 }
 
 .quick ul li {
-  width: 10px;
-  height: 10px;
+  width: 5px;
+  height: 25px;
+  transform: rotate(50deg);
   margin-bottom: 10px;
-  border-radius: 100%;
-  border: 2px solid #ddd;
+  background-color: #eee;
   cursor: pointer;
 }
 
 .quick .on {
-  background:transparent;
+  background: #333;
 }
 
 

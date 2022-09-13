@@ -1,12 +1,6 @@
 // page1 스크롤 버튼 호버시 마우스 바뀌게
 $(function(){
-  $(".p1_scroll > img").hover(function(){
-    $(".cursor").css("opacity","0");
-  },function(){
-    $(".cursor").css("opacity","1");
-  });
-
-  $(".p1_scroll").hover(function(){
+  $(".menu").hover(function(){
     $(".cursor").css("opacity","0");
   },function(){
     $(".cursor").css("opacity","1");
