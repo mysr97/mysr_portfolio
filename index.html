@@ -17,7 +17,7 @@
 </head>
 
 <body>
-  
+
   <div class="menu">
     <div class="icon">
 
@@ -144,33 +144,34 @@ $(document).ready(function(){
 });
 
 function fullset(){
-	var pageindex = $("#wrap > .full").size(); //fullpage 안에 섹션이(.fullsection) 몇개인지 확인하기
+	var pageindex = $("#wrap > .full").size(); 
+
 	for(var i=1;i<=pageindex;i++){
 		$("#wrap > .quick > ul").append("<li></li>");
 	}
-	$("#wrap .quick ul:first-child").addClass("on"); //일단 화면이 로드 되었을때는 퀵버튼에 1번째에 불이 들어오게
+	$("#wrap > .quick > ul > li:first-child").addClass("on"); 
 
 	//마우스 휠 이벤트
 	$(window).bind("mousewheel", function(event){
 		var page = $(".quick ul li.on");
-		//alert(page.index()+1);  // 현재 on 되어있는 페이지 번호
+
 		if($("body").find("#wrap:animated").length >= 1) return false;
-		//마우스 휠을 위로
+	
 		if(event.originalEvent.wheelDelta >= 0) {
 			var before=page.index();
-			if(page.index() >= 0) page.prev().addClass("on").siblings(".on").removeClass("on");//퀵버튼옮기기
+			if(page.index() >= 0) page.prev().addClass("on").siblings(".on").removeClass("on");
 			var pagelength=0;
 			for(var i=1; i<(before); i++)
 			{
 				pagelength += $(".page"+i).height();
 			}
-			if(page.index() > 0){ //첫번째 페이지가 아닐때 (index는 0부터 시작임)
+			if(page.index() > 0){ 
 				page=page.index()-1;
 				$("#wrap").animate({"top": -pagelength + "px"},1000, "swing");
 			}
 
 		}else{ // 마우스 휠을 아래로	
-			var nextPage=parseInt(page.index()+1); //다음페이지번호
+			var nextPage=parseInt(page.index()+1); 
 			var lastPageNum=parseInt($(".quick ul li").size()); //마지막 페이지번호
 			//현재페이지번호 <= (마지막 페이지 번호 - 1)
 			//이럴때 퀵버튼옮기기
@@ -187,9 +188,6 @@ function fullset(){
 				}
 				$("#wrap").animate({"top": -pagelength + "px"},1000, "swing");
 			}
-			else{ // 현재 마지막 페이지 일때는
-				alert("마지막 페이지 입니다!");
-			};		
 			
 		}
 	});
