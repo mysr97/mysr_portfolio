@@ -17,11 +17,29 @@
 </head>
 
 <body>
+  
+  <div class="menu">
+    <div class="icon">
+
+    </div>
+
+    <ul>
+      <li>main</li>
+      <li>skill</li>
+      <li>profile</li>
+      <li>project</li>
+      <li>contact</li>
+    </ul>
+  </div>
 
     <div id="wrap">
       <div class="cursor"></div>
 
-        <div class="full page1">
+      <div class='quick'>
+        <ul></ul>
+      </div>
+
+        <div class="full page1" pageNum="1">
 
           <script>
             const circle = document.querySelector(".cursor");
@@ -73,17 +91,17 @@
           })
         </script>
 
-        <div class="full page2">
+        <div class="full page2" pageNum="2">
 
           <div class="p2_wr">
 
             <ul>
-              <li>HTML <span style="color:#f1672c00;">- 100%</span></li>
-              <li>CSS <span style="color:#00a2ff00;">- 100%</span></li>
-              <li>JAVASCRIPT <span style="color:#ffca2b00">- 70%</span></li>
-              <li>JQUERY <span style="color:#78cff500">- 80%</span></li>
-              <li>PHOTOSHOP <span style="color:#192d4500">- 100%</span></li>
-              <li>ILLUSTRATOR <span style="color:#3f1e1900">- 100%</span></li>
+              <li>HTML <span style="color:#f1672c00;">/ 90%</span></li>
+              <li>CSS <span style="color:#00a2ff00;">/ 90%</span></li>
+              <li>JAVASCRIPT <span style="color:#ffca2b00">/ 50%</span></li>
+              <li>JQUERY <span style="color:#78cff500">/ 60%</span></li>
+              <li>PHOTOSHOP <span style="color:#192d4500">/ 100%</span></li>
+              <li>ILLUSTRATOR <span style="color:#3f1e1900">/ 100%</span></li>
               <li style="font-size: 0.5em;">..and more</li>
             </ul>
 
@@ -93,11 +111,11 @@
         </div>
   
 
-        <div class="full page3">
+        <div class="full page3" pageNum="3">
           page3
         </div>
 
-        <div class="full page4">
+        <div class="full page4" pageNum="4">
           <div class="slide_p4">
             <div class="p4_one">
               <div></div>
@@ -105,10 +123,106 @@
           </div>
         </div>
 
-        <div class="full page5">
+        <div class="full page5" pageNum="5">
           page5
         </div>
 
+        
+
     </div>
+
+
 </body>
+
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+
+<script>
+$(document).ready(function(){
+	fullset();
+	quickClick();
+});
+
+function fullset(){
+	var pageindex = $("#wrap > .full").size(); //fullpage 안에 섹션이(.fullsection) 몇개인지 확인하기
+	for(var i=1;i<=pageindex;i++){
+		$("#wrap > .quick > ul").append("<li></li>");
+	}
+	$("#wrap .quick ul:first-child").addClass("on"); //일단 화면이 로드 되었을때는 퀵버튼에 1번째에 불이 들어오게
+
+	//마우스 휠 이벤트
+	$(window).bind("mousewheel", function(event){
+		var page = $(".quick ul li.on");
+		//alert(page.index()+1);  // 현재 on 되어있는 페이지 번호
+		if($("body").find("#wrap:animated").length >= 1) return false;
+		//마우스 휠을 위로
+		if(event.originalEvent.wheelDelta >= 0) {
+			var before=page.index();
+			if(page.index() >= 0) page.prev().addClass("on").siblings(".on").removeClass("on");//퀵버튼옮기기
+			var pagelength=0;
+			for(var i=1; i<(before); i++)
+			{
+				pagelength += $(".page"+i).height();
+			}
+			if(page.index() > 0){ //첫번째 페이지가 아닐때 (index는 0부터 시작임)
+				page=page.index()-1;
+				$("#wrap").animate({"top": -pagelength + "px"},1000, "swing");
+			}
+
+		}else{ // 마우스 휠을 아래로	
+			var nextPage=parseInt(page.index()+1); //다음페이지번호
+			var lastPageNum=parseInt($(".quick ul li").size()); //마지막 페이지번호
+			//현재페이지번호 <= (마지막 페이지 번호 - 1)
+			//이럴때 퀵버튼옮기기
+			if(page.index() <= $(".quick ul li").size()-1){ 
+				page.next().addClass("on").siblings(".on").removeClass("on");
+			}
+			
+			if(nextPage < lastPageNum){ //마지막 페이지가 아닐때만 animate !
+				var pagelength=0;
+				for(var i = 1; i<(nextPage+1); i++){ 
+					//총 페이지 길이 구하기
+					//ex) 현재 1번페이지에서 2번페이지로 내려갈때는 1번페이지 길이 + 2번페이지 길이가 더해짐
+					pagelength += $(".page"+i).height();
+				}
+				$("#wrap").animate({"top": -pagelength + "px"},1000, "swing");
+			}
+			else{ // 현재 마지막 페이지 일때는
+				alert("마지막 페이지 입니다!");
+			};		
+			
+		}
+	});
+	$(window).resize(function(){ 
+		//페이지가 100%이기때문에 브라우저가 resize 될때마다 스크롤 위치가 그대로 남아있는것을 방지하기 위해
+		var resizeindex = $(".quick ul li.on").index()+1;
+		
+		var pagelength=0;
+		for(var i = 1; i<resizeindex; i++){ 
+			//총 페이지 길이 구하기
+			//ex) 현재 1번페이지에서 2번페이지로 내려갈때는 1번페이지 길이 + 2번페이지 길이가 더해짐
+			pagelength += $(".page"+i).height();
+		}
+
+		$("#wrap").animate({"top": -pagelength + "px"},0);
+	});
+}
+// 사이드 퀵버튼 클릭 이동
+function quickClick(){
+	$(".quick li").click(function(){
+		var gnbindex = $(this).index()+1;
+		var length=0;
+		for(var i=1; i<(gnbindex); i++)
+		{
+			length+=$(".page"+i).height();
+		}
+		if($("body").find("#wrap:animated").length >= 1) return false;
+		$(this).addClass("on").siblings("li").removeClass("on");
+		
+		$("#wrap").animate({"top": -length + "px"},800, "swing");
+		return false;
+	});
+}
+
+</script>
 </html>

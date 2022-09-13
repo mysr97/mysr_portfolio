@@ -1,19 +1,54 @@
 @charset "utf-8";
 
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+  font-family: sans-serif;
+}
+
+.menu {
+  position: fixed;
+  width: 10%;
+  height: 100%;
+  background-color: transparent;
+  z-index: 100000;
+  border-right: 1px #ddd solid;
+}
+
+.menu .icon {
+  width: 50%;
+  height: 10%;
+  background-color: aqua;
+  margin: 40px auto;
+}
+
+.menu ul {
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.menu ul li {
+  margin-top: 10%;
+}
 
 #wrap {
-  width: 100vw;
-  height: 100vh;
-  margin: 0 auto;
-
+  position: relative;
+  top: 0px;
+  z-index: 9;
+  width: 100%;
+  height: 100%;
 }
 
 .full {
   width: 100%;
   height: 100%;
-  overflow: hidden;
+  position: relative;
 }
-
 .cursor {
   position: absolute;
   width: 200px;
@@ -22,11 +57,32 @@
   z-index: 99;
   cursor: none;
   opacity: 1;
-} 
+}
+
+.quick {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100000;
+}
+
+.quick ul li {
+  width: 10px;
+  height: 10px;
+  margin-bottom: 10px;
+  border-radius: 100%;
+  border: 2px solid #ddd;
+  cursor: pointer;
+}
+
+.quick .on {
+  background:transparent;
+}
+
 
 /*--- page1 시작 ---*/
 .page1 {
-  width: 100%;
   margin: 0 auto;
   overflow: hidden;
   background-color: rgb(255, 255, 255);
@@ -47,11 +103,11 @@
   color: transparent;
   transform: translate(-50%, -50%);
   white-space: nowrap;
-  top: -10%;
-  left: 43%;
+  top: 30%;
+  left: 50%;
   font-weight: 900;
-  font-size: 12em;
-  line-height: 160px;
+  font-size: 8em;
+  line-height: 120px;
 }
 
 .page1 .p1_wr ul:nth-child(1) {
@@ -60,7 +116,7 @@
 
 .page1 .p1_wr .p1_txt_mask{
   position: relative;
-  height: 160px;
+  height: 130px;
   overflow: hidden;
 }
 
@@ -110,14 +166,14 @@
 }
 
 .page2 .p2_wr ul{
+  width: 100%;
   position: absolute; /*ul 2개를 같은 곳에 위치하도록*/
   color: transparent;
-  transform: translate(-10%, 10%);
+  transform: translateX(-50%);
   white-space: nowrap;
-  top: 50%;
-  right: 0;
+  left: 35%;
   font-weight: 900;
-  font-size: 7em;
+  font-size: 5em;
   line-height: 110px;
   text-align: right;
   font-style: italic;
@@ -125,6 +181,7 @@
 }
 
 .page2 .p2_wr ul li {
+  width: 100%;
 }
 
 .page2 .p2_wr ul li span {
