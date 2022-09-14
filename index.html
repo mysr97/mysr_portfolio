@@ -96,12 +96,12 @@
           <div class="p2_wr">
 
             <ul>
-              <li>HTML <span style="color:#f1672c00;">/ 90%</span></li>
-              <li>CSS <span style="color:#00a2ff00;">/ 90%</span></li>
-              <li>JAVASCRIPT <span style="color:#ffca2b00">/ 50%</span></li>
-              <li>JQUERY <span style="color:#78cff500">/ 60%</span></li>
-              <li>PHOTOSHOP <span style="color:#192d4500">/ 100%</span></li>
-              <li>ILLUSTRATOR <span style="color:#3f1e1900">/ 100%</span></li>
+              <li><span> HTML</span><span style="color:#f1672c00;">/ 90%</span></li>
+              <li><span> CSS</span><span style="color:#00a2ff00;">/ 90%</span></li>
+              <li><span> JAVASCRIPT</span><span style="color:#ffca2b00">/ 50%</span></li>
+              <li><span> JQUERY</span><span style="color:#78cff500">/ 60%</span></li>
+              <li><span> PHOTOSHOP</span><span style="color:#192d4500">/ 100%</span></li>
+              <li><span> ILLUSTRATOR</span><span style="color:#3f1e1900">/ 100%</span></li>
               <li style="font-size: 0.5em;">..and more</li>
             </ul>
 
@@ -173,17 +173,15 @@ function fullset(){
 		}else{ // 마우스 휠을 아래로	
 			var nextPage=parseInt(page.index()+1); 
 			var lastPageNum=parseInt($(".quick ul li").size()); //마지막 페이지번호
-			//현재페이지번호 <= (마지막 페이지 번호 - 1)
-			//이럴때 퀵버튼옮기기
+
 			if(page.index() <= $(".quick ul li").size()-1){ 
 				page.next().addClass("on").siblings(".on").removeClass("on");
 			}
 			
-			if(nextPage < lastPageNum){ //마지막 페이지가 아닐때만 animate !
+			if(nextPage < lastPageNum){ 
 				var pagelength=0;
 				for(var i = 1; i<(nextPage+1); i++){ 
-					//총 페이지 길이 구하기
-					//ex) 현재 1번페이지에서 2번페이지로 내려갈때는 1번페이지 길이 + 2번페이지 길이가 더해짐
+
 					pagelength += $(".page"+i).height();
 				}
 				$("#wrap").animate({"top": -pagelength + "px"},1000, "swing");
@@ -192,13 +190,12 @@ function fullset(){
 		}
 	});
 	$(window).resize(function(){ 
-		//페이지가 100%이기때문에 브라우저가 resize 될때마다 스크롤 위치가 그대로 남아있는것을 방지하기 위해
+
 		var resizeindex = $(".quick ul li.on").index()+1;
 		
 		var pagelength=0;
 		for(var i = 1; i<resizeindex; i++){ 
-			//총 페이지 길이 구하기
-			//ex) 현재 1번페이지에서 2번페이지로 내려갈때는 1번페이지 길이 + 2번페이지 길이가 더해짐
+
 			pagelength += $(".page"+i).height();
 		}
 

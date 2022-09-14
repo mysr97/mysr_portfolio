@@ -43,15 +43,14 @@ function rgbToHex ( rgbType ){
 };
 
 $(document).ready(function () {
-  $(".page2 .p2_wr ul li").mouseover(function () {
-    var color = $(this).children();
+  $(".page2 .p2_wr ul li span:nth-of-type(1)").mouseover(function () {
+    var color = $(this).siblings();
     var color2 = color.css("color");
     var colorhex = rgbToHex(color2);
     var colorch = colorhex.substring(0, 7);
 
-  console.log(color2)
-    $(this).children().fadeIn("slow");
+    $(this).siblings().fadeIn("slow");
     $(this).css("color",colorch);
-    $(this).children().css("color",colorch);
+    $(this).siblings().css("color",colorch);
   })
 });
