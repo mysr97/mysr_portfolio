@@ -43,7 +43,7 @@ function rgbToHex ( rgbType ){
 };
 
 $(document).ready(function () {
-  $(".page2 .p2_wr ul li span:nth-of-type(1)").mouseover(function () {
+  $(".page3 .p3_wr ul li span:nth-of-type(1)").mouseover(function () {
     var color = $(this).siblings();
     var color2 = color.css("color");
     var colorhex = rgbToHex(color2);

@@ -156,19 +156,25 @@ body {
 .page2 {
   width: 100%;
   margin: 0 auto;
+}
+/*--- page3 시작 ---*/
+
+
+.page3 {
+  width: 100%;
+  margin: 0 auto;
   overflow: hidden;
   position: relative;
 }
 
 
-.page2 .p2_wr {
+.page3 .p3_wr {
   width: 100%;
   top: 0;
   position: relative;
-  cursor: pointer;
 }
 
-.page2 .p2_wr ul{
+.page3 .p3_wr ul{
   width: 100%;
   position: absolute; /*ul 2개를 같은 곳에 위치하도록*/
   color: transparent;
@@ -176,29 +182,24 @@ body {
   white-space: nowrap;
   left: 35%;
   font-weight: 900;
-  font-size: 5em;
-  line-height: 110px;
+  font-size: 4.5em;
+
   text-align: right;
   font-style: italic;
   -webkit-text-stroke: 1px #333;
 }
 
-.page2 .p2_wr ul li {
+.page3 .p3_wr ul li {
   width: 100%;
 }
+.page3 .p3_wr ul li span {
+  cursor: pointer;
+}
 
-.page2 .p2_wr ul li span:nth-of-type(2) {
+.page3 .p3_wr ul li span:nth-of-type(2) {
   display: none;
   font-size: 0.7em;
   line-height: 80px;
-}
-
-/*--- page3 시작 ---*/
-.page3 {
-  width: 100%;
-  margin: 0 auto;
-  overflow: hidden;
-  background-color: rgba(0, 255, 255, 0.6);
 }
 
 
