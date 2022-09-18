@@ -21,10 +21,12 @@ body {
 }
 
 .menu .icon {
-  width: 50%;
+  width: 65%;
   height: 10%;
-  background-color: aqua;
   margin: 40px auto;
+}
+.menu .icon img {
+  width: 100%;
 }
 
 .menu ul {
@@ -36,6 +38,7 @@ body {
 .menu ul li {
   margin-top: 10%;
   cursor: pointer;
+  text-align: center;
 }
 
 #wrap {
