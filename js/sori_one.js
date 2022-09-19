@@ -34,11 +34,10 @@ $(document).ready(function ($) {
 //page2 클릭시 내용 보이게
 $(function(){
   $(".p2_box2 > div > div > ul > li:nth-of-type(odd)").click(function(){
-    $(".p2_box2 > div > div > ul > li:nth-of-type(even)").css("display","none");
-    $(this).next().slideToggle();
     $(".p2_box2 > div > div > ul > li:nth-of-type(odd)").css("color","#333");
-    $(this).css("color","#ccc");
     $(this).children().eq(1).css("display","none"); //click 없애기
+    $(this).next().slideToggle();
+    $(this).css("color","#ccc");
   });
 });
 
@@ -75,6 +74,7 @@ $(document).ready(function () {
     var colorch = colorhex.substring(0, 7);
 
     $(this).siblings().fadeIn("slow");
+    $(this).siblings().css("display","inline");
     $(this).css("color",colorch);
     $(this).siblings().css("color",colorch);
   })
