@@ -13,7 +13,6 @@
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
-  <script src="js/sori_one.js"></script>
 </head>
 
 <body>
@@ -39,7 +38,7 @@
         <ul></ul>
       </div>
 
-        <div class="full page1" pageNum="1">
+      <div class="full page1" pageNum="1">
 
           <script>
             const circle = document.querySelector(".cursor");
@@ -75,26 +74,55 @@
           <div class="p1_scroll">
             <img src="img/scroll_icon.svg" alt="scroll">
           </div>
+      </div>
+
+      <div class="full page2" pageNum="2">
+        <div class="p2_box1"> <!--프로필 이미지-->
+          <div>
+          </div>
         </div>
-
-        <script>
-          const container = document.querySelector(".p1_txt_mask");
-
-          document.body.addEventListener("mousemove", e => {
-            const x = e.clientX;
-            const y = e.clientY - 450;
-            gsap.to(container, {
-              y: y
-            });
-            gsap.to(".p1_txt_mask_in", {
-              y: -y
-            });
-          })
-        </script>
-
-        <div class="full page2" pageNum="2">
-
+        <div class="p2_box2">
+          <div>
+            <p>introduce <br> myself</p>
+            <div>
+              <ul>
+                <li>| <span>profile</span> <span style="font-size:0.3em; border:none; color:#ddd;"> click</span></li>
+                <li>
+                  <p>
+                    이름 : 김소리 <br>
+                    생년월일 : 1997.12.16 (만 24세) <br>
+                    거주지 : 경기도 안산 <br>
+                    학력 : 안산대학교 시각미디어디자인과(2016.03~2020.02) <br>
+                  </p>
+                </li>
+                <li>| <span>certificate</span> <span style="font-size:0.3em; border:none; color:#ddd;"> click</span></li>
+                <li>
+                  <p>
+                    컴퓨터활용능력 2급 <br> 
+                    ITQ 엑셀 A <br>
+                    무역영어 3급 <br>
+                  </p>
+                </li>
+                <li>| <span>career</span> <span style="font-size:0.3em; border:none; color:#ddd;"> click</span></li>
+                <li>
+                  <p>
+                    안산대학교 원격교육지원사업 계약직 (2020.06~2021.1) <br>
+                    안산대학교 시각미디어디자인학과 조교 (2021.02~2022.01) <br>
+                  </p>
+                </li>
+                <li>| <span>experience</span> <span style="font-size:0.3em; border:none; color:#ddd;"> click</span></li>
+                <li>
+                  <p>
+                    2016.03 ~ 2017.02 안산대학교 시각미디어디자인과 1학년 과대표 <br>
+                    2017.06.28. ~2017.07.03 안산대학교 섬김의 리더 해외봉사 활동 (캄보디아) <br>
+                    2017.03 ~ 2018.02 안산대학교 제 33대 총학생회 복지부장 <br>
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
+      </div>
   
 
         <div class="full page3" pageNum="3">
@@ -132,93 +160,10 @@
 
     </div>
 
-
 </body>
+
 
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-
-<script>
-$(document).ready(function(){
-	fullset();
-	quickClick();
-});
-
-function fullset(){
-	var pageindex = $("#wrap > .full").size(); 
-
-	for(var i=1;i<=pageindex;i++){
-		$("#wrap > .quick > ul").append("<li></li>");
-	}
-	$("#wrap > .quick > ul >li:first-child").addClass("on"); 
-
-	//마우스 휠 이벤트
-	$(window).bind("mousewheel", function(event){
-		var page = $(".quick ul li.on");
-
-		if($("body").find("#wrap:animated").length >= 1) return false;
-	
-		if(event.originalEvent.wheelDelta >= 0) {
-			var before=page.index();
-			if(page.index() >= 0) page.prev().addClass("on").siblings(".on").removeClass("on");
-			var pagelength=0;
-			for(var i=1; i<(before); i++)
-			{
-				pagelength += $(".page"+i).height();
-			}
-			if(page.index() > 0){ 
-				page=page.index()-1;
-				$("#wrap").animate({"top": -pagelength + "px"},1000, "swing");
-			}
-
-		}else{ // 마우스 휠을 아래로	
-			var nextPage=parseInt(page.index()+1); 
-			var lastPageNum=parseInt($(".quick ul li").size()); //마지막 페이지번호
-
-			if(page.index() <= $(".quick ul li").size()-1){ 
-				page.next().addClass("on").siblings(".on").removeClass("on");
-			}
-			
-			if(nextPage < lastPageNum){ 
-				var pagelength=0;
-				for(var i = 1; i<(nextPage+1); i++){ 
-
-					pagelength += $(".page"+i).height();
-				}
-				$("#wrap").animate({"top": -pagelength + "px"},1000, "swing");
-			}
-			
-		}
-	});
-	$(window).resize(function(){ 
-
-		var resizeindex = $(".quick ul li.on").index()+1;
-		
-		var pagelength=0;
-		for(var i = 1; i<resizeindex; i++){ 
-
-			pagelength += $(".page"+i).height();
-		}
-
-		$("#wrap").animate({"top": -pagelength + "px"},0);
-	});
-}
-// 사이드 퀵버튼 클릭 이동
-function quickClick(){
-	$(".quick li").click(function(){
-		var gnbindex = $(this).index()+1;
-		var length=0;
-		for(var i=1; i<(gnbindex); i++)
-		{
-			length+=$(".page"+i).height();
-		}
-		if($("body").find("#wrap:animated").length >= 1) return false;
-		$(this).addClass("on").siblings("li").removeClass("on");
-		
-		$("#wrap").animate({"top": -length + "px"},800, "swing");
-		return false;
-	});
-}
-
-</script>
+<script src="js/sori_one.js"></script>
 </html>
