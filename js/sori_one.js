@@ -169,3 +169,14 @@ function quickClick(){
 }
 
 
+//page4 클릭
+
+$(document).ready(function () {
+	$(".p4_box_img, .sub_go").hover(function () {
+		$(".img1").stop().animate({'background-position-y':'-=1100'},10000);
+		$(".img2").stop().animate({'background-position-y':'-=800'},10000);
+		$(".img3").stop().animate({'background-position-y':'-=900'},10000);
+	}, function(){
+		$(".img1,.img2,.img3").stop().animate({'background-position-y':'0'},1000);
+	})
+});

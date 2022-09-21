@@ -298,10 +298,14 @@ body {
   position: relative;
 }
 
+.page4 hr {
+  margin-top: 50vh;
+}
+
 .page4 .p4_box {
   width: 90%;
   height: 90%;
-  background-color: aliceblue;
+  background-color: transparent;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -315,11 +319,69 @@ body {
   position: relative;
 }
 
-.page4 .p4_box .p4_box_in img {
-  height: 100%;
+.page4 .p4_box .p4_box_in .sub_go {
+  position: absolute;
+  width: 529px;
+  height: 300px;
+  background-color: rgba(255, 255, 255, 0.762);
+  transform: translate(-50%,-50%);
+  top: 38%;
+  left: 50%;
+  z-index: 1000;
+  text-align: center;
+}
+
+.page4 .p4_box .p4_box_in .sub_go a {
   position: absolute;
   transform: translate(-50%,-50%);
   top: 50%;
+  left: 50%;
+  font-size: 2.5em;
+}
+
+
+.page4 .p4_box .p4_box_in .p4_box_img {
+  position: absolute;
+  width: 529px;
+  height: 300px;
+  background-color: transparent;
+  transform: translate(-50%,-50%);
+  top: 38%;
+  left: 50%;
+  overflow: hidden;
+  display: flex;
+  z-index: 999;
+}
+
+.page4 .p4_box .p4_box_in .p4_box_img >.img1 {
+  width: 33.3%;
+  height: 100%;
+  background-image: url("../img/서울문화재단.png");
+  background-size: cover;
+  background-position: 0 0px;
+}
+
+.page4 .p4_box .p4_box_in .p4_box_img >.img2 {
+  width: 33.3%;
+  height: 100%;
+  background-image: url("../img/서울문화재단.png");
+  background-size: cover;
+  background-position: 0 -50px;
+}
+
+.page4 .p4_box .p4_box_in .p4_box_img >.img3 {
+  width: 33.3%;
+  height: 100%;
+  background-image: url("../img/서울문화재단.png");
+  background-size: cover;
+  background-position: 0 -100px;
+}
+
+.page4 .p4_box .p4_box_in img {
+  height: 600px;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 55%;
   left: 50%;
 }
 
