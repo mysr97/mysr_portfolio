@@ -130,10 +130,6 @@ function fullset(){
 					pagelength += $(".page"+i).height();
 				}
 				$("#wrap").animate({"top": -pagelength + "px"},1000, "swing");
-				$("html,body").css("overflow","hidden");
-			}
-			else{
-				$("html,body").css("overflow","scroll");
 			}
 			
 		}

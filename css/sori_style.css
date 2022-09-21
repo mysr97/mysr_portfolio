@@ -364,7 +364,7 @@ body {
 .page4 .p4_box .p4_box_in .p4_box_img >.img2 {
   width: 33.3%;
   height: 100%;
-  background-image: url("../img/서울문화재단.png");
+  background-image: url("../img/Daniel\'s\ Truth_main.png");
   background-size: cover;
   background-position: 0 -50px;
 }
@@ -392,5 +392,41 @@ body {
   width: 100%;
   margin: 0 auto;
   overflow: hidden;
-  background-color: rgba(0, 255, 255, 0.1);
+  background-color: transparent
+}
+
+.page5 h3 {
+  text-align: center;
+  font-size: 3em;
+  text-transform: uppercase;
+  margin: 8% 0 4%;
+}
+.page5 .line {
+  width: 1px;
+  height: 15%;
+  background-color: black;
+  margin: 0 auto;
+}
+
+.page5 .p5_box {
+  margin: 0 auto;
+  width: 90%;
+  display: flex;
+}
+
+
+.page5 .p5_box div {
+  width: 33.3%;
+  text-align: center;
+  font-size: 1.3em;
+  color: #555;
+}
+
+.page5 .p5_box div img {
+  margin-top: 20%;
+  width: 15%;
+}
+
+.page5 .p5_box div > a, p {
+  margin-top: 8%;
 }
