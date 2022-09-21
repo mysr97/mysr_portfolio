@@ -306,12 +306,21 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
-  overflow: scroll;
 }
 
-.page4 .p4_box .p4_slide {
-  width: 500%;
+.page4 .p4_box .p4_box_in {
+  width: 100%;
   height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.page4 .p4_box .p4_box_in img {
+  height: 100%;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 50%;
 }
 
 
