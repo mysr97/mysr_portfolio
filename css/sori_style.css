@@ -427,6 +427,10 @@ body {
   width: 15%;
 }
 
-.page5 .p5_box div > a, p {
+.page5 .p5_box div a {
+  margin-top: 8%;
+}
+
+.page5 .p5_box div p {
   margin-top: 8%;
 }
