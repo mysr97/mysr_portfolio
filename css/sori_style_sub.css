@@ -76,7 +76,7 @@ body {
     position: absolute;
     width: 100%;
     z-index: 998;
-    filter:contrast(0.5);
+    filter: brightness(0.6);
 }
 .s_box .s_img .cover:hover {
     opacity: 0;
