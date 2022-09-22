@@ -11,11 +11,18 @@ body {
 
 #wrap {
     position: relative;
-    min-height: 3400px;
+    min-height: 2675px;
     width: 100%;
-    height: 375%;
+    height: 313.5%;
     background-color: transparent;
   }
+
+.main_go {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+}
 
 .slide {
     position: fixed;
@@ -35,8 +42,13 @@ body {
 
 
 .s_box .s_img {
-    width: 50%;
-    height: 100%;
+    position: relative;
+    top: 50%;
+    left: 2%;
+    transform: translateY(-50%);
+    width: 45%;
+    height: 90%;
+    border: 1px solid #888;
     background-color: bisque;
     overflow: scroll;
 }
@@ -51,12 +63,12 @@ body {
 
 
 .s_box .s_txt {
-    margin-left: 3%;
+    margin-left: 5%;
 }
 
 .s_box .s_txt h2 {
     margin-top: 20%;
-    font-size: 2.7em;
+    font-size: 3em;
     line-height: 1.1em;
     text-transform: uppercase;
     color: transparent;
