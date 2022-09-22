@@ -259,6 +259,7 @@ body {
 }
 
 .page3 .p3_wr ul{
+  margin-top: 5%;
   width: 100%;
   position: absolute; /*ul 2개를 같은 곳에 위치하도록*/
   color: transparent;
@@ -326,7 +327,7 @@ body {
   background-color: rgba(255, 255, 255, 0.762);
   transform: translate(-50%,-50%);
   top: 42%;
-  left: 50%;
+  left: 49.8%;
   z-index: 1000;
   text-align: center;
 }
@@ -347,7 +348,7 @@ body {
   background-color: transparent;
   transform: translate(-50%,-50%);
   top: 42%;
-  left: 50%;
+  left: 49.8%;
   overflow: hidden;
   display: flex;
   z-index: 999;
