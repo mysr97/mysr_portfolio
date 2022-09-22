@@ -304,8 +304,8 @@ body {
 }
 
 .page4 .p4_box {
-  width: 90%;
-  height: 90%;
+  width: 100%;
+  height: 100%;
   background-color: transparent;
   position: absolute;
   top: 50%;
@@ -315,7 +315,7 @@ body {
 
 .page4 .p4_box .p4_box_in {
   width: 100%;
-  height: 800px;
+  height: 900px;
   overflow: hidden;
   position: relative;
 }
@@ -326,7 +326,7 @@ body {
   height: 300px;
   background-color: rgba(255, 255, 255, 0.762);
   transform: translate(-50%,-50%);
-  top: 37%;
+  top: 43%;
   left: 49.8%;
   z-index: 1000;
   text-align: center;
@@ -343,11 +343,11 @@ body {
 
 .page4 .p4_box .p4_box_in .p4_box_img {
   position: absolute;
-  width: 529px;
-  height: 300px;
+  width: 625px;
+  height: 350px;
   background-color: transparent;
   transform: translate(-50%,-50%);
-  top: 37%;
+  top: 42%;
   left: 49.8%;
   overflow: hidden;
   display: flex;
@@ -373,16 +373,16 @@ body {
 .page4 .p4_box .p4_box_in .p4_box_img >.img3 {
   width: 33.3%;
   height: 100%;
-  background-image: url("../img/서울문화재단.png");
+  background-image: url("../img/04.김소리_main.jpg");
   background-size: cover;
   background-position: 0 -100px;
 }
 
 .page4 .p4_box .p4_box_in img {
-  height: 600px;
+  height: 700px;
   position: absolute;
   transform: translate(-50%,-50%);
-  top: 50%;
+  top: 55%;
   left: 50%;
 }
 

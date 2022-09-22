@@ -1,0 +1,31 @@
+@charset "utf-8";
+
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+#wrap {
+    position: relative;
+    min-height: 3400px;
+    width: 100%;
+    height: 375%;
+    background-color: bisque;
+  }
+
+.slide {
+    position: fixed;
+    width: 500%;
+    height: 100%;
+    background-color: aqua;
+    overflow: hidden;
+    display: flex;
+
+}
+
+.s_box {
+    width: 100%;
+    height: 100%;
+}
