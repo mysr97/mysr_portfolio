@@ -92,7 +92,9 @@ body {
 
 
 .s_box .s_txt {
+    width: 50%;
     margin-left: 5%;
+
 }
 
 .s_box .s_txt h2 {
@@ -110,4 +112,17 @@ body {
     font-size: 1.2em;
     letter-spacing: 0.2em;
     font-weight: 100;
+}
+
+.s_box .s_txt .web_info {
+
+}
+
+.s_box .s_txt p {
+    margin-top: 50px;
+    margin-left: 45px;
+    width: 50%;
+    color: #333;
+    font-weight: 200;
+    font-size: 0.9em;
 }
