@@ -112,6 +112,7 @@ body {
     font-size: 1.2em;
     letter-spacing: 0.2em;
     font-weight: 100;
+    text-transform: uppercase;
 }
 
 .s_box .s_txt .web_info {
@@ -125,4 +126,29 @@ body {
     color: #333;
     font-weight: 200;
     font-size: 0.9em;
+}
+.s_box .s_txt span {
+    display:block;
+    margin-top: 20px;
+    margin-left: 45px;
+    width: 50%;
+    color: #888;
+    font-size: 0.9em;
+}
+
+.s_box .s_txt button {
+    background-color: transparent;
+    margin-top: 20px;
+    color: #888;
+    font-size: 0.9em;
+    border: 1px solid #888;
+    width: 80px;
+    padding: 10px 0;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.s_box .s_txt button:hover {
+    background-color: #888;
+    color: #fff;
 }
