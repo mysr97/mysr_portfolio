@@ -20,8 +20,21 @@ body {
 .main_go {
     position: fixed;
     bottom: 20px;
-    right: 20px;
+    right: 25px;
     z-index: 999;
+    width: 50px;
+}
+
+.main_go a {
+    width: 100%;
+}
+
+.main_go a img {
+    width: 100%;
+}
+.main_go a img:hover {
+    width: 105%;
+    transition: all 0.3s ease-in-out;
 }
 
 .slide {
