@@ -147,6 +147,7 @@ body {
     width: 50%;
     color: #888;
     font-size: 0.9em;
+    text-transform: uppercase;
 }
 
 .s_box .s_txt button {
