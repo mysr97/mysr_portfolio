@@ -81,9 +81,8 @@ $(document).ready(function(){
 });
 
 function fullset(){
-	var pageindex = $(".menu_list > li").size(); // 메뉴 li 갯수
 
-	$(".menu_list > li:first-child").addClass("on");
+	$(".menu_list > li:first-child").addClass("on");  // quick의 첫번째 li에 on 클래스 추가
 
 	//마우스 휠 이벤트
 	$(window).bind("mousewheel", function(event){
@@ -94,7 +93,7 @@ function fullset(){
 		if(event.originalEvent.wheelDelta >= 0) { // 마우스 휠 위로
 			var before=page.index(); 
 			if(page.index() >= 0) page.prev().addClass("on").siblings(".on").removeClass("on"); 
-
+			
 			var pagelength=0;
 			for(var i=1; i<(before); i++)
 			{
@@ -108,9 +107,9 @@ function fullset(){
 
 		}else{ // 마우스 휠을 아래로	
 			var nextPage=parseInt(page.index()+1); 
-			var lastPageNum=parseInt($(".menu_list > li").size()); //마지막 페이지번호
+			var lastPageNum=parseInt($(".menu_list > li").length); //마지막 페이지번호
 
-			if(page.index() <= $(".menu_list > li").size()-1){ 
+			if(page.index() <= $(".menu_list > li").length-1){ 
 				page.next().addClass("on").siblings(".on").removeClass("on");
 			}
 			
