@@ -14,6 +14,7 @@ $(window).on("scroll", function () {
 });
 
 
+// 넘기기 버튼
 $(function(){
 
     var wid = $(".s_box").width() * -1;
